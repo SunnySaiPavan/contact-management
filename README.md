@@ -52,4 +52,67 @@ ER-daigram
 |                      | is_deleted                    |                              |
 
 
+1.User Authentication
+
+JWT-based registration and login
+Email verification upon registration
+Password reset functionality using a one-time code
+
+
+2.Contact Management
+
+Add, update, and delete (soft delete) contacts
+Retrieve contacts with filtering (by name, email, timezone) and sorting options
+Batch processing for adding/updating multiple contacts in a single request
+
+
+3.Data Validation
+
+Validation of inputs using libraries (e.g., Joi, yup)
+Unique constraints on emails for users and contacts
+
+
+4.Date-Time and Timezone Management
+
+UTC storage for creation and update timestamps
+Convert timestamps to the user's specified timezone on retrieval
+Filter contacts based on date range
+
+
+5.File Handling
+
+CSV/Excel file uploads for bulk creation and updating of contacts
+Download endpoint for exporting contacts in CSV/Excel format
+
+
+6.Security
+
+Rate limiting on sensitive endpoints
+Secure password hashing and storage
+
+
+Installation
+To set up the project locally:
+
+1.Clone the repository:
+
+git clone (https://github.com/SunnySaiPavan/contact-management.git)
+cd contact-management
+
+
+2.Install dependencies:
+npm install
+
+3.Configure environment variables (see Environment Variables).
+
+4.Run the backend server:
+npm run dev
+
+Environment Variables
+Create a .env file in the root directory with the following variables:
+```
+supabaseUrl = "";
+supabaseAnonKey = ""
+
+```
 
