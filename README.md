@@ -38,19 +38,18 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ER-daigram
 
-+--------------------+        +-----------------------+        +--------------------------+
-|       User         |        |       Contact         |        |    PasswordResetToken     |
-+--------------------+        +-----------------------+        +--------------------------+
-| user_id (PK)       | <----- | contact_id (PK)       |        | token_id (PK)            |
-| name               |        | user_id (FK)          | <----- | user_id (FK)             |
-| email (UNIQUE)     |        | name                  |        | token                    |
-| password_hash      |        | email (UNIQUE)        |        | expires_at               |
-| is_verified        |        | phone_number          |        +--------------------------+
-| created_at         |        | address               |
-| updated_at         |        | timezone              |
-+--------------------+        | created_at            |
-                              | updated_at            |
-                              | is_deleted            |
-                              +-----------------------+
+| **User**             | **Contact**                    | **PasswordResetToken**       |
+|----------------------|--------------------------------|------------------------------|
+| user_id (PK)         | contact_id (PK)               | token_id (PK)                |
+| name                 | user_id (FK)                  | user_id (FK)                 |
+| email (UNIQUE)       | name                          | token                        |
+| password_hash        | email (UNIQUE)                | expires_at                   |
+| is_verified          | phone_number                  |                              |
+| created_at           | address                       |                              |
+| updated_at           | timezone                      |                              |
+|                      | created_at                    |                              |
+|                      | updated_at                    |                              |
+|                      | is_deleted                    |                              |
+
 
 
